@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1C5BA6</color>
+    <color name="colorPrimaryDark">#11315E</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="digitsBackground">#00000000</color>
+    <color name="controlsBackground">#00000000</color>
+    <color name="additionalControlsBackground">#00000000</color>
+
+    <color name="digitsColor">#000000</color>
+    <color name="buttonDisabledColor">#969696</color>
+    <color name="controlsColor">#1C5BA6</color>
+    <color name="additionalControlsColor">#646464</color>
+
+    <color name="mainBackground">#ffffff</color>
+
+    <color name="resultMainColor">#000000</color>
+    <color name="resultLastColor">#808080</color>
+
+
+    <color name="dividerColor">#808080</color>
+
+</resources>

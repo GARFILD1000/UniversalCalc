@@ -1,0 +1,69 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="digitsButtons">
+        <item name="android:textColor">@color/button_digit_color</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:background">@color/digitsBackground</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <style name="controlButtons">
+        <item name="android:textColor">@color/controlsColor</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:background">@color/controlsBackground</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="memoryControlButtons">
+        <item name="android:textColor">@color/button_memory_color</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:background">@color/additionalControlsBackground</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="additionalControlButtons">
+        <item name="android:textColor">@color/additionalControlsColor</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:background">@color/additionalControlsBackground</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="resultMain">
+        <item name="android:textColor">@color/resultMainColor</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">end</item>
+    </style>
+
+    <style name="resultLast">
+        <item name="android:textColor">@color/resultLastColor</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:gravity">end</item>
+    </style>
+
+</resources>

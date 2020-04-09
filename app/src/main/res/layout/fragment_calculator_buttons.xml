@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?><!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:orientation="vertical">-->
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tableLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:baselineAligned="false">
+
+        <Button
+            style="@style/controlButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/buttonRad"
+            style="@style/additionalControlButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="rad" />
+
+        <Button
+            android:id="@+id/buttonSin"
+            style="@style/additionalControlButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="sin" />
+
+        <Button
+            android:id="@+id/buttonCos"
+            style="@style/additionalControlButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="cos" />
+
+        <Button
+            android:id="@+id/buttonTan"
+            style="@style/additionalControlButtons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="tan" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:baselineAligned="false">
+
+        <Button
+            android:id="@+id/buttonPow"
+            style="@style/additionalControlButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="^" />
+
+        <Button
+            android:id="@+id/buttonLog"
+            style="@style/additionalControlButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="lg" />
+
+        <Button
+            android:id="@+id/buttonLn"
+            style="@style/additionalControlButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="ln" />
+
+        <Button
+            android:id="@+id/buttonScopeLeft"
+            style="@style/additionalControlButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="(" />
+
+        <Button
+            android:id="@+id/buttonScopeRight"
+            style="@style/additionalControlButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text=")" />
+
+    </TableRow>
+    
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:baselineAligned="false">
+
+        <Button
+            android:id="@+id/buttonRoot"
+            style="@style/additionalControlButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="√x" />
+        
+        <Button
+            android:id="@+id/buttonClear"
+            style="@style/controlButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="AC" />
+
+        <FrameLayout
+            android:id="@+id/buttonBackspace"
+            style="@style/controlButtons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:cropToPadding="true"
+                android:padding="4dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_backspace" />
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/buttonPercent"
+            style="@style/controlButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="%" />
+
+        <Button
+            android:id="@+id/buttonDiv"
+            style="@style/controlButtons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="÷"
+            android:textSize="28dp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:baselineAligned="false">
+
+
+        <Button
+            android:id="@+id/buttonFact"
+            style="@style/additionalControlButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="x!" />
+        
+        <Button
+            android:id="@+id/buttonDgt7"
+            style="@style/digitsButtons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/buttonDgt8"
+            style="@style/digitsButtons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/buttonDgt9"
+            style="@style/digitsButtons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/buttonMul"
+            style="@style/controlButtons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="×"
+            android:textSize="28dp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:baselineAligned="false">
+
+        <Button
+            android:id="@+id/buttonReverse"
+            style="@style/additionalControlButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="1/x" />
+        
+        <Button
+            android:id="@+id/buttonDgt4"
+            style="@style/digitsButtons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/buttonDgt5"
+            style="@style/digitsButtons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/buttonDgt6"
+            style="@style/digitsButtons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/buttonSub"
+            style="@style/controlButtons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="-"
+            android:textSize="28dp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:baselineAligned="false">
+        
+        <Button
+            android:id="@+id/buttonPiNumber"
+            style="@style/additionalControlButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="π" />
+        
+        <Button
+            android:id="@+id/buttonDgt1"
+            style="@style/digitsButtons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/buttonDgt2"
+            style="@style/digitsButtons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/buttonDgt3"
+            style="@style/digitsButtons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/buttonAdd"
+            style="@style/controlButtons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="+"
+            android:textSize="28dp" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:baselineAligned="false">
+
+        <Button
+            android:id="@+id/buttonExpNumber"
+            style="@style/additionalControlButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="e" />
+        
+        <FrameLayout
+            android:id="@+id/buttonMoreControls"
+            style="@style/controlButtons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:cropToPadding="true"
+                android:padding="4dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_more_buttons" />
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/buttonDgt0"
+            style="@style/digitsButtons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/buttonDot"
+            style="@style/digitsButtons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:text="." />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/buttonEqual"
+                style="@style/controlButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="1dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/shape_oval" />
+
+            <TextView
+                style="@style/controlButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="="
+                android:textColor="@color/mainBackground"
+                android:textSize="28dp" />
+        </FrameLayout>
+    </TableRow>
+</TableLayout><!--</LinearLayout>-->
