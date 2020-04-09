@@ -1,4 +1,4 @@
-package com.example.perfectcalc.vm
+package com.example.perfectcalc.useless
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

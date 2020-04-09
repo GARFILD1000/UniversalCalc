@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.perfectcalc.R
-import com.example.perfectcalc.vm.CalculatorViewModel
 import kotlinx.android.synthetic.main.fragment_calculator_buttons.*
 
 class CalculatorButtonsFragment : Fragment() {
