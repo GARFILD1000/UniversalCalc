@@ -8,46 +8,17 @@
     android:orientation="vertical"
     tools:context=".ui.activity.MainActivity">
 
-    <fragment
-        android:id="@+id/resultsFragment"
-        android:name="com.example.perfectcalc.ui.fragment.ResultsFragment"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        tools:layout="@layout/fragment_results"
-        />
-
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/dividerColor" />
-
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewPagerButtons"
+        android:id="@+id/viewPagerMain"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3">
 
-
-        <androidx.viewpager.widget.PagerTabStrip
-            android:id="@+id/pager_header"
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top"
-            android:paddingBottom="4dp"
-            android:paddingTop="4dp" />
+            android:layout_height="wrap_content" />
 
     </androidx.viewpager.widget.ViewPager>
-
-
-
-<!--    <fragment-->
-<!--        android:id="@+id/calcButtonsFragment"-->
-<!--        android:name="com.example.perfectcalc.ui.fragment.PNumberButtonsFragment"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_weight="3"-->
-<!--        tools:layout="@layout/fragment_buttons_pnumber"/>-->
 
 </LinearLayout>

@@ -1,5 +1,6 @@
 package com.example.perfectcalc.util
 
+import java.lang.Math.pow
 import kotlin.math.abs
 import kotlin.math.absoluteValue
 import kotlin.math.pow
@@ -126,6 +127,10 @@ class TPNumber : TNumber {
         return parsed != null && parsed < numberBase.base
     }
 
+    fun isCorrect(): Boolean {
+        return number < Double.MAX_VALUE && number > Double.MIN_VALUE && !number.isNaN() && number.isFinite()
+    }
+
     override fun toString(): String {
         return toString(numberBase)
     }
@@ -133,25 +138,29 @@ class TPNumber : TNumber {
     fun toString(base: NumberBase): String {
         var result = StringBuilder()
         var remains = 0
-        var quotient = number.toInt().absoluteValue
+        var quotient = number.toLong().absoluteValue
         while (quotient >= base.base) {
-            remains = quotient % base.base
+            remains = (quotient - (base.base * (quotient / base.base))).toInt()
             quotient = quotient / base.base
             result.append(digitsConverting.get(remains))
         }
 
-        result.append(digitsConverting.get(quotient))
+        result.append(digitsConverting.get(quotient.toInt()))
         if (number < 0) result.append("-")
         result.reverse()
 
-        var fractional = (number - (number.toInt())).absoluteValue
+        var fractional = (number - (number.toLong())).absoluteValue
 
-        if (fractional > 0.0) {
-            result.append(separators)
+        if (fractional > DOUBLE_DELTA) {
             for (i in 0 until precision) {
                 fractional = fractional * base.base
-                result.append(digitsConverting.get(fractional.toInt()))
+                val newDigit = digitsConverting.get(fractional.toInt()) ?: break
+                if (!result.contains(separators)) {
+                    result.append(separators)
+                }
+                result.append(newDigit)
                 fractional = (fractional - (fractional.toInt()))
+                if (fractional <= DOUBLE_DELTA) break
             }
         }
         return result.toString()
@@ -226,7 +235,8 @@ class TPNumber : TNumber {
 }
 
 fun main() {
-    val num1 = TPNumber(1.0, NumberBase.TEN, 5)
-    val num2 = TPNumber(0.0, NumberBase.TEN, 5)
-    println(num1 / num2)
+    val num1 = TPNumber("90293750297350927", NumberBase.TEN, 5)
+    val num2 = TPNumber(num1.number, NumberBase.TWO, 5)
+    println(num1.isCorrect())
+    println("${num1.number} ${Double.POSITIVE_INFINITY} ${num1.number < pow(2.0, 8.0*4.0)}")
 }
